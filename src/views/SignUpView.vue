@@ -1,22 +1,22 @@
 <template>
     <div class="flex flex-col items-center justify-center h-screen">
-      <h1 class="text-3xl font-bold text-gray-800 mb-4">Sign Up</h1>
+      <h1 class="text-3xl font-bold text-white mb-4">Sign Up</h1>
       <form @submit.prevent="signup" class="w-full max-w-sm">
         <div class="mb-4">
-          <label class="block text-gray-700">Email</label>
+          <label class="block text-white">Email</label>
           <input type="email" v-model="email" required class="mt-1 p-2 w-full border rounded" />
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Password</label>
+          <label class="block text-white">Password</label>
           <input type="password" v-model="password" required class="mt-1 p-2 w-full border rounded" />
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Confirm Password</label>
+          <label class="block text-white">Confirm Password</label>
           <input type="password" v-model="confirmPassword" required class="mt-1 p-2 w-full border rounded" />
         </div>
         <button type="submit" class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">Sign Up</button>
       </form>
-      <p class="mt-4 text-gray-600">
+      <p class="mt-4 text-white">
         Already have an account?
         <router-link to="/login" class="text-blue-600 hover:underline">Log in</router-link>
       </p>

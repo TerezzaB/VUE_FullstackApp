@@ -54,7 +54,7 @@ const router = useRouter();
 const route = useRoute();
 
 // show/hide header
-const showHeader = computed(() => !['/', '/login', '/forgot-password', '/reset-password', '/sign-up'].includes(route.path));
+const showHeader = computed(() => !['/', '/login', '/forgot-password', '/reset-password', '/signup'].includes(route.path));
 
 // if HomeView was visited
 const hasVisitedHome = localStorage.getItem('hasVisitedHome');

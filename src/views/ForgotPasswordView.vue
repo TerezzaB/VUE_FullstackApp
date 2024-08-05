@@ -4,7 +4,7 @@
       <form @submit.prevent="submitForgotPassword">
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-white">Email</label>
-          <input type="email" id="email" v-model="email" class="mt-1 block w-full border-gray-300 rounded-md" required />
+          <input type="email" id="email" v-model="email" class="mt-1 p-2 block w-full border rounded-md" required />
         </div>
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">Submit</button>
       </form>
