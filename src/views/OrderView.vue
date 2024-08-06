@@ -40,35 +40,31 @@ import { useRouter } from 'vue-router';
 const orders = ref<any[]>([]);
 const router = useRouter();
 
-// Načítanie zoznamu objednávok z API
+
 const fetchOrders = async () => {
   try {
-    const response = await axios.get('https://api/orders');
+    const response = await axios.get('https://localhost:5173/api/orders');
     orders.value = response.data;
   } catch (error) {
     console.error('Error fetching orders:', error);
   }
 };
 
-// Vytvorenie novej objednávky
 const createOrder = () => {
   alert('Create Order button clicked. Implement the logic here.');
 };
 
-// Zobrazenie detailov objednávky
 const viewOrder = (id: number) => {
-  router.push({ path: `/orders/${id}` }); // Navigácia na stránku s detailmi objednávky
+  router.push({ path: `/orders/${id}` });
 };
 
-// Úprava objednávky
 const editOrder = (id: number) => {
   alert(`Edit Order with ID: ${id}. Implement the logic here.`);
 };
 
-// Zmazanie objednávky
 const deleteOrder = async (id: number) => {
   try {
-    await axios.delete(`https://localhost/api/orders/${id}`);
+    await axios.delete(`https://localhost:5173/api/orders/${id}`);
     fetchOrders(); // Obnov zoznam po zmazaní
   } catch (error) {
     console.error('Error deleting order:', error);

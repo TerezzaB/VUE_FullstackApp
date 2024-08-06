@@ -19,7 +19,7 @@
   
   const submitForgotPassword = async () => {
     try {
-      await axios.post('https://localhost/forgot-password', { email: email.value });
+      await axios.post('https://localhost:5173/forgot-password', { email: email.value });
       alert('A reset link has been sent to your email address.');
     } catch (error) {
       console.error('Error sending reset link:', error);
